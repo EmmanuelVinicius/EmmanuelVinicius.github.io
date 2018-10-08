@@ -160,36 +160,37 @@ i.box-circle-solid{
 	-webkit-transition: 0.1s ease-in;
 	-moz-transition: 0.1s ease-in;
 }
-.top-nav .navbar-brand{
-	font-size: 28px;
-	color: #fff;
-	font-family: 'Montserrat', sans-serif;
+.top-nav .navbar-brand img{
+	width: 20%;
 }
 .top-nav.light-header{
 	height: 60px;
-	background: #fff;
+	background: #35cbdf;
 	box-shadow: 0 0 10px rgba(0,0,0,0.23);
 	transition: 0.5s ease-in;
 	-webkit-transition: 0.5s ease-in;
 	-moz-transition: 0.5s ease-in;
 }
-.top-nav.light-header .navbar-brand{
-	color: #212121;
+.top-nav.light-header .navbar-brand img{
+	width: 15%;
+	transition: 0.5s ease-in;
+	-webkit-transition: 0.5s ease-in;
+	-moz-transition: 0.5s ease-in;
 }
 .top-nav.light-header .navbar-nav li .nav-link {
     color: #212121;
     padding: 19px 15px;
-    transition: 0.5s ease-in;
-	-webkit-transition: 0.5s ease-in;
-	-moz-transition: 0.5s ease-in;
+    transition: 0.1s ease-in;
+	-webkit-transition: 0.1s ease-in;
+	-moz-transition: 0.1s ease-in;
 }
 
 .top-nav.light-header li a.nav-link:hover, .top-nav.light-header .nav-item.active a.nav-link{
-	border-bottom: 3px solid #35cbdf;
-    color: #35cbdf;
-    transition: 0.5s ease-in;
-	-webkit-transition: 0.5s ease-in;
-	-moz-transition: 0.5s ease-in;
+	border-bottom: 3px solid #fff;
+    color: #fff;
+    transition: 0.1s ease-in;
+	-webkit-transition: 0.1s ease-in;
+	-moz-transition: 0.1s ease-in;
 }
 
 
@@ -293,6 +294,7 @@ i.box-circle-solid{
 	-moz-transition: .5s;
 }
 .info-section .service-block-overlay:hover{
+	cursor: pointer;
 	background: #fff none repeat scroll 0 0;
     border-radius: 5px;
     box-shadow: 0 0 90px rgba(0, 0, 0, 0.1);
@@ -516,7 +518,7 @@ transition:1s ease-in;
 	background-color:#BD3518;
 }
 .social-box a.ld-box:hover {
-	background-color:#007bb7;
+	background-color:#cd486b;
 }
 ul.social-box {
 	list-style: none;
@@ -665,7 +667,21 @@ ul.social-box li {
 	text-decoration: underline;
 }
 
+textarea{
+	resize: none;
+}
+.card-body #pergunta {
+	font-weight: bold;	
+}
 
+.card-body #resposta {
+	color: #619DE3;
+}
+#infografico img{
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 /* ========== Responsive Stylings ========== */
 @media (max-width: 991px){
 	.container{
@@ -737,7 +753,10 @@ ul.social-box li {
     }
     .intro .btn-primary{
         margin-top: 20px;
-    }
+	}
+	.top-nav{
+		display: block;
+	}
     .top-nav .navbar-toggler i {
     color: #fff;
     margin-top: 6px;
