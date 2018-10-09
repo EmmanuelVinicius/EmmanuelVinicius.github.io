@@ -48,7 +48,7 @@ $(document.body).on("click", ".col-lg-4", function (ev) {
     nomeServico = valorServico.text();
     
     $(".modal-title").text(nomeServico);
-    var tituloAjax = trim(removerAcentos(nomeServico).replace(/\s/g, ''));
+    var tituloAjax = removerAcentos(nomeServico).replace(/\s/g, '');
 
     $.ajax({
         url: "ajax/" + tituloAjax + ".html",
