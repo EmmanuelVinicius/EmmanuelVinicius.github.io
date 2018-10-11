@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:500,600,700');
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700');
 
+
 body, html{
 	height: 100%;
 	width:100%;
@@ -208,7 +209,7 @@ i.box-circle-solid{
 	height: 60%;
 }
 .intro-bg{
-	background:url("../img/intro-bg-03.jpg");
+	background:url("../img/14.jpg");
 	background-repeat:no-repeat;
 	background-position: center center;
 	background-size:cover;
@@ -514,11 +515,11 @@ transition:1s ease-in;
 .social-box a.tw-box:hover {
 	background-color:#33ccff;
 }
-.social-box a.go-box:hover {
-	background-color:#BD3518;
+.social-box a.ig-box:hover {
+	background-color:#cd486b;
 }
 .social-box a.ld-box:hover {
-	background-color:#cd486b;
+	background-color:#007bb7;
 }
 ul.social-box {
 	list-style: none;
@@ -597,6 +598,7 @@ ul.social-box li {
 .faq-box .card-header{
 	background-color: #35CBDF;
 	color: #fff;
+	cursor:pointer;
 }
 
 

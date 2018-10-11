@@ -37,6 +37,7 @@ $(window).scroll(function () {
     }
 });
 
+
 $(document.body).on("click", ".col-lg-4", function (ev) {
     $(this).attr("data-toggle", "modal").attr("data-target", "#exampleModal");
     var servico = $(ev.target);
@@ -46,7 +47,7 @@ $(document.body).on("click", ".col-lg-4", function (ev) {
         valorServico = servico.siblings("h3");
     }
     nomeServico = valorServico.text();
-    
+
     $(".modal-title").text(nomeServico);
     var tituloAjax = removerAcentos(nomeServico).replace(/\s/g, '');
 
