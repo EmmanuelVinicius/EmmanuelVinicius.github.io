@@ -61,6 +61,22 @@ $(document.body).on("click", ".col-lg-4", function (ev) {
     })
 })
 
+$(document.body).on("click", ".contratar", function (ev) {
+    $(this).attr("data-toggle", "modal").attr("data-target", "#ModalPagamento");
+    var nome = $(this).attr();
+    
+    $.ajax({
+        url: "pagamento.html",
+        type: "GET",
+        dataType: "html",
+        success: function (result) {
+            $(".modal-content").html(result);
+        }
+    })
+})
+
+
+
 $('.carousel').slick({
     dots: true,
     infinite: false,

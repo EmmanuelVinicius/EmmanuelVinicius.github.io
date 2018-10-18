@@ -799,6 +799,10 @@ textarea {
 	color: darkgray;
 }
 
+.modal-lg {
+	max-width: 90% !important;
+}
+
 /* ========== Responsive Stylings ========== */
 
 @media (max-width: 991px) {
