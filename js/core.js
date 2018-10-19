@@ -25,6 +25,34 @@ function removerAcentos(newStringComAcento) {
 
     return string;
 }
+// Array de Pacotes
+$(document).ready(function () {
+
+    var Pacotes = ["Basico", "Intermediario", "Profissional", "Modulo", "Anual", "Bianual"]
+
+    var tipos = $(".tipos");
+    Pacotes.forEach(element => {
+        tipos.html(
+            "<div class= 'form-group'>" +
+            "<input type = 'checkbox' name = 'fancy-checkbox-info1' id = 'fancy-checkbox-info1' autocomplete = 'off' />" +
+            "<div class= 'btn-group'>" +
+            "<label for= 'fancy-checkbox-info1' class= 'btn btn-info'>" +
+            "<span class= 'glyphicon glyphicon-ok'></span>" +
+            "<span > <i class='fa fa-check'></i></span>" +
+            "</label>" +
+            "<label for= 'fancy-checkbox-info1' class= 'btn btn-default'>" +
+            element +
+            "</label>" +
+            "</div>" +
+            "</div>"
+        )
+        for (let i = 0; i < Pacotes.length; i++) {
+            const element= array[i];
+            
+        }
+    })
+})
+
 
 // Sticky Header
 $(window).scroll(function () {
@@ -63,17 +91,44 @@ $(document.body).on("click", ".col-lg-4", function (ev) {
 
 $(document.body).on("click", ".contratar", function (ev) {
     $(this).attr("data-toggle", "modal").attr("data-target", "#ModalPagamento");
-    var nome = $(this).attr();
+    /*var nome = $(this).attr();
     
     $.ajax({
         url: "pagamento.html",
         type: "GET",
         dataType: "html",
         success: function (result) {
-            $(".modal-content").html(result);
+            $(".modal-header").html(result);
         }
-    })
-})
+    })*/
+    var nomeDoTipo = $(ev.target).attr("id")
+
+});
+/*
+switch ($(ev.target).attr("id")) {
+    case "Basico":
+        console.log($(ev.target).attr("id"))
+        break;
+    case "Intermediario":
+        console.log($(ev.target).attr("id"))
+        break;
+    case "Profissional":
+        console.log($(ev.target).attr("id"))
+        break;
+    case "Anual":
+        console.log($(ev.target).attr("id"))
+        break;
+    case "Bianual":
+        console.log($(ev.target).attr("id"))
+        break;
+    case "Modulo":
+
+        break;
+    default:
+        console.log($(ev.target).attr("id"))
+        break;
+}
+*/
 
 
 
