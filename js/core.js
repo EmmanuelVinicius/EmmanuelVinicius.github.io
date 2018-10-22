@@ -31,7 +31,9 @@ $(document).ready(function () {
     var Pacotes = ["Basico", "Intermediario", "Profissional", "Modulo", "Anual", "Bianual"]
 
     var tipos = $(".tipos");
-    Pacotes.forEach(element => {
+    for (let i = 0; i < Pacotes.length; i++) {
+        const element = array[i];
+    
         tipos.html(
             "<div class= 'form-group'>" +
             "<input type = 'checkbox' name = 'fancy-checkbox-info1' id = 'fancy-checkbox-info1' autocomplete = 'off' />" +
@@ -46,11 +48,7 @@ $(document).ready(function () {
             "</div>" +
             "</div>"
         )
-        for (let i = 0; i < Pacotes.length; i++) {
-            const element= array[i];
-            
-        }
-    })
+    }
 })
 
 
