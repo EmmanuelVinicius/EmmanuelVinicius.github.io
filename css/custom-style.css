@@ -182,6 +182,7 @@ i.box-circle-solid {
 
 .top-nav .navbar-brand {
 	width: 10%;
+	cursor: pointer;
 }
 
 .top-nav.light-header {
@@ -198,6 +199,7 @@ i.box-circle-solid {
 	transition: 0.5s ease-in;
 	-webkit-transition: 0.5s ease-in;
 	-moz-transition: 0.5s ease-in;
+	cursor: pointer;
 }
 
 .top-nav.light-header .navbar-nav li .nav-link {
@@ -723,8 +725,6 @@ ul.social-box li {
 	font-weight: 700;
 }
 
-.price-section .price-block {}
-
 .price-section .currency {
 	font-size: 25px;
 	vertical-align: super;
@@ -773,16 +773,23 @@ ul.social-box li {
 	width: 100%;
 	height: 13vh;
 	border-radius: 5px;
+	color: white;
+}
+.media-body a{
+	text-decoration: none;
 }
 
 .redes:hover {
+	/*transition-property: font-size;
 	transition-duration: .2s;
-	transition-timing-function: linear;
+	transition-timing-function: ease-in-out;
+	transition: font-size .2s ease-in-out .2s;*/
+	transition: all 300ms cubic-bezier(0.420, 0.000, 0.580, 1.000);
 	background: rgba(255, 255, 255, 0.2);
 	cursor: pointer;
 	overflow: visible;
-	height: 15vh;
-	padding: 3vh 0;
+	height: 13vh;
+	font-size: 2.6vh;
 }
 
 /* ========== Copy Footer Styles ========== */

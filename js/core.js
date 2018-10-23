@@ -25,32 +25,6 @@ function removerAcentos(newStringComAcento) {
 
     return string;
 }
-// Array de Pacotes
-$(document).ready(function () {
-
-    var Pacotes = ["Basico", "Intermediario", "Profissional", "Modulo", "Anual", "Bianual"]
-
-    var tipos = $(".tipos");
-    for (let i = 0; i < Pacotes.length; i++) {
-        const element = array[i];
-    
-        tipos.html(
-            "<div class= 'form-group'>" +
-            "<input type = 'checkbox' name = 'fancy-checkbox-info1' id = 'fancy-checkbox-info1' autocomplete = 'off' />" +
-            "<div class= 'btn-group'>" +
-            "<label for= 'fancy-checkbox-info1' class= 'btn btn-info'>" +
-            "<span class= 'glyphicon glyphicon-ok'></span>" +
-            "<span > <i class='fa fa-check'></i></span>" +
-            "</label>" +
-            "<label for= 'fancy-checkbox-info1' class= 'btn btn-default'>" +
-            element +
-            "</label>" +
-            "</div>" +
-            "</div>"
-        )
-    }
-})
-
 
 // Sticky Header
 $(window).scroll(function () {
@@ -62,7 +36,7 @@ $(window).scroll(function () {
         $(".top-nav").removeClass("light-header");
     }
 });
-
+/*
 
 $(document.body).on("click", ".col-lg-4", function (ev) {
     $(this).attr("data-toggle", "modal").attr("data-target", "#exampleModal");
@@ -85,7 +59,7 @@ $(document.body).on("click", ".col-lg-4", function (ev) {
             $(".modal-body").html(result);
         }
     })
-})
+})*/
 
 $(document.body).on("click", ".contratar", function (ev) {
     $(this).attr("data-toggle", "modal").attr("data-target", "#ModalPagamento");
@@ -99,8 +73,7 @@ $(document.body).on("click", ".contratar", function (ev) {
             $(".modal-header").html(result);
         }
     })*/
-    var nomeDoTipo = $(ev.target).attr("id")
-
+    console.log("deu certo")
 });
 /*
 switch ($(ev.target).attr("id")) {
@@ -128,7 +101,19 @@ switch ($(ev.target).attr("id")) {
 }
 */
 
+$(".redes").click(function(){
+    $(this).attr("target", "_blank")
+})
+//Logo inicial
+$(".navbar-brand").click(function (){
+    window.location.href = "index.html"
+})
 
+// Year for copy content
+$(function () {
+    var theYear = new Date().getFullYear();
+    $('#year').html(theYear);
+});
 
 $('.carousel').slick({
     dots: true,
@@ -166,9 +151,3 @@ $('.carousel').slick({
     ]
 });
 
-
-// Year for copy content
-$(function () {
-    var theYear = new Date().getFullYear();
-    $('#year').html(theYear);
-});
