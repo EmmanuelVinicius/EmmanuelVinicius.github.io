@@ -74,6 +74,7 @@ $(document.body).on("click", ".contratar", function (ev) {
         }
     })*/
     console.log("deu certo")
+    
 });
 /*
 switch ($(ev.target).attr("id")) {
@@ -115,39 +116,23 @@ $(function () {
     $('#year').html(theYear);
 });
 
-$('.carousel').slick({
-    dots: true,
-    infinite: false,
-    speed: 300,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    responsive: [
-        {
-            breakpoint: 1200,
-            settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3,
-                infinite: true,
-                dots: true
-            }
-        },
-        {
-            breakpoint: 991,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2
-            }
-        },
-        {
-            breakpoint: 767,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-            }
+$("[name='fancy-checkbox-info']").click(function (ev) {
+    if ($(this).attr("id") == "fancy-checkbox-info1" || $(this).attr("id") == "fancy-checkbox-info2"){
+        $(".checkTodos").prop('disable', this.disable);
+    }else{
+        $(".checkTodos").click(function () {
+            $('input.custom-control-input').not(this).prop('checked', this.checked);
+        });
+    }
+    var MAX_SELECT = $(ev.target).val();
+
+    $('input.custom-control-input').on('change', function () {
+        if ($(this).siblings(':checked').length >= MAX_SELECT) {
+            this.checked = false;
         }
-        // You can unslick at a given breakpoint now by adding:
-        // settings: "unslick"
-        // instead of a settings object
-    ]
+    });
+    $(".valor").html(
+        "R$ " + ""
+    )
 });
 
