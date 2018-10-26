@@ -74,7 +74,7 @@ $(document.body).on("click", ".contratar", function (ev) {
         }
     })*/
     console.log("deu certo")
-    
+
 });
 /*
 switch ($(ev.target).attr("id")) {
@@ -102,11 +102,11 @@ switch ($(ev.target).attr("id")) {
 }
 */
 
-$(".redes").click(function(){
+$(".redes").click(function () {
     $(this).attr("target", "_blank")
 })
 //Logo inicial
-$(".navbar-brand").click(function (){
+$(".navbar-brand").click(function () {
     window.location.href = "index.html"
 })
 
@@ -116,23 +116,34 @@ $(function () {
     $('#year').html(theYear);
 });
 
-$("[name='fancy-checkbox-info']").click(function (ev) {
-    if ($(this).attr("id") == "fancy-checkbox-info1" || $(this).attr("id") == "fancy-checkbox-info2"){
-        $(".checkTodos").prop('disable', this.disable);
-    }else{
-        $(".checkTodos").click(function () {
-            $('input.custom-control-input').not(this).prop('checked', this.checked);
-        });
+
+var MAX_SELECT = 1
+$("[name='fancy-checkbox-info']").change(function (ev) {
+    if (($(this).attr("id") == "fancy-checkbox-info1") || ($(this).attr("id") == "fancy-checkbox-info2")) {
+        $(".checkTodos").attr('disabled', 'disabled');
+    } else {
+        $(".checkTodos").removeAttr('disabled');
     }
-    var MAX_SELECT = $(ev.target).val();
+})
+
+
 
     $('input.custom-control-input').on('change', function () {
         if ($(this).siblings(':checked').length >= MAX_SELECT) {
             this.checked = false;
         }
     });
-    $(".valor").html(
-        "R$ " + ""
-    )
-});
+
+// $('input.custom-control-input').on('change', function () {
+//     if ($(this).siblings(':checked').length >= MAX_SELECT) {
+//         this.checked = false;
+//     }
+//     $(".valor").html(
+//         "R$ " + ""
+//     )
+// });
+// $(".checkTodos").click(function () {
+//     $('input.custom-control-input').not('.checkTodos').prop('checked', '.checkTodos'.checked);
+// });
+
 
