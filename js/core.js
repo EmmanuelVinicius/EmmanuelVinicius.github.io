@@ -117,7 +117,6 @@ $(function () {
 });
 
 
-var MAX_SELECT = 1
 $("[name='fancy-checkbox-info']").change(function (ev) {
     if (($(this).attr("id") == "fancy-checkbox-info1") || ($(this).attr("id") == "fancy-checkbox-info2")) {
         $(".checkTodos").attr('disabled', 'disabled');
@@ -127,12 +126,15 @@ $("[name='fancy-checkbox-info']").change(function (ev) {
 })
 
 
+$(function () {
+    var MAX_SELECT = 3; // Máximo de 'input' selecionados
 
-    $('input.custom-control-input').on('change', function () {
+    $('alo').on('change', function () {
         if ($(this).siblings(':checked').length >= MAX_SELECT) {
             this.checked = false;
         }
     });
+});
 
 // $('input.custom-control-input').on('change', function () {
 //     if ($(this).siblings(':checked').length >= MAX_SELECT) {

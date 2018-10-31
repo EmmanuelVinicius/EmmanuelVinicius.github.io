@@ -844,7 +844,7 @@ textarea {
 	max-width: 90% !important;
 }
 
-.form-group input[type="checkbox"] {
+/* .form-group input[type="checkbox"] {
 	display: none;
 }
 
@@ -866,7 +866,7 @@ textarea {
 
 .form-group input[type="checkbox"]:checked+.btn-group>label span:last-child {
 	display: none;
-}
+} */
 
 /* ========== Responsive Stylings ========== */
 
