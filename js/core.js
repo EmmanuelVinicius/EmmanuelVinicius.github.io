@@ -117,23 +117,20 @@ $(function () {
 });
 
 
-$("[name='fancy-checkbox-info']").change(function (ev) {
-    if (($(this).attr("id") == "fancy-checkbox-info1") || ($(this).attr("id") == "fancy-checkbox-info2")) {
+var MAX_SELECT;
+$("[name='radio-pacotes']").change(function (ev) {
+    if (($(this).attr("id") == "radio-pacotes1") || ($(this).attr("id") == "radio-pacotes2")) {
         $(".checkTodos").attr('disabled', 'disabled');
     } else {
         $(".checkTodos").removeAttr('disabled');
     }
+    MAX_SELECT = $(this).val();
 })
 
-
-$(function () {
-    var MAX_SELECT = 3; // Máximo de 'input' selecionados
-
-    $('alo').on('change', function () {
-        if ($(this).siblings(':checked').length >= MAX_SELECT) {
-            this.checked = false;
-        }
-    });
+$('.alo').on('change', function () {
+    if ($(this).siblings(':checked').length >= MAX_SELECT) {
+        this.checked = false;
+    }
 });
 
 // $('input.custom-control-input').on('change', function () {

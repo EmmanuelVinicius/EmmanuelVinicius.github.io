@@ -11,6 +11,7 @@
         crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/custom-style.css">
     <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/Checkbox-Radio.css">
 </head>
 
 <body>
@@ -32,97 +33,32 @@
             </div>
         </div>
     </section>
-
     <section>
-        <div class="form-group col-md-8">
-            <input type="checkbox" name="fancy-checkbox-info" checked="false" id="fancy-checkbox-info1" autocomplete="off" value="3"
-            />
-            <div class="btn-group">
-                <label for="fancy-checkbox-info1" class="btn btn-info">
-                    <span class="glyphicon glyphicon-ok"></span>
-                    <span>
-                        <i class="fa fa-check"></i>
-                    </span>
-                </label>
-                <label for="fancy-checkbox-info1" class="btn btn-default">
-                    Básico
-                </label>
-            </div>
-        </div>
-        <div class="form-group col-md-8">
-            <input type="checkbox" name="fancy-checkbox-info" checked="false" id="fancy-checkbox-info2" autocomplete="off" value="6"
-            />
-            <div class="btn-group">
-                <label for="fancy-checkbox-info2" class="btn btn-info">
-                    <span class="glyphicon glyphicon-ok"></span>
-                    <span>
-                        <i class="fa fa-check"></i>
-                    </span>
-                </label>
-                <label for="fancy-checkbox-info2" class="btn btn-default">
-                    Intermediário
-                </label>
-            </div>
-        </div>
-        <div class="form-group col-md-8">
-            <input type="checkbox" name="fancy-checkbox-info" checked="false" id="fancy-checkbox-info3" autocomplete="off" value="9"
-            />
-            <div class="btn-group">
-                <label for="fancy-checkbox-info3" class="btn btn-info">
-                    <span class="glyphicon glyphicon-ok"></span>
-                    <span>
-                        <i class="fa fa-check"></i>
-                    </span>
-                </label>
-                <label for="fancy-checkbox-info3" class="btn btn-default">
-                    Profissional
-                </label>
-            </div>
-        </div>
-        <div class="form-group col-md-8">
-            <input type="checkbox" name="fancy-checkbox-info" checked="false" id="fancy-checkbox-info4" autocomplete="off" value="9"
-            />
-            <div class="btn-group">
-                <label for="fancy-checkbox-info4" class="btn btn-info">
-                    <span class="glyphicon glyphicon-ok"></span>
-                    <span>
-                        <i class="fa fa-check"></i>
-                    </span>
-                </label>
-                <label for="fancy-checkbox-info4" class="btn btn-default">
-                    Módulo
-                </label>
-            </div>
-        </div>
-        <div class="form-group col-md-8">
-            <input type="checkbox" name="fancy-checkbox-info" checked="false" id="fancy-checkbox-info5" autocomplete="off" value="9"
-            />
-            <div class="btn-group">
-                <label for="fancy-checkbox-info5" class="btn btn-info">
-                    <span class="glyphicon glyphicon-ok"></span>
-                    <span>
-                        <i class="fa fa-check"></i>
-                    </span>
-                </label>
-                <label for="fancy-checkbox-info5" class="btn btn-default">
-                    Anual
-                </label>
-            </div>
-        </div>
-        <div class="form-group col-md-8">
-            <input type="checkbox" name="fancy-checkbox-info" checked="false" id="fancy-checkbox-info6" autocomplete="off" value="9"
-            />
-            <div class="btn-group">
-                <label for="fancy-checkbox-info6" class="btn btn-info">
-                    <span class="glyphicon glyphicon-ok"></span>
-                    <span>
-                        <i class="fa fa-check"></i>
-                    </span>
-                </label>
-                <label for="fancy-checkbox-info6" class="btn btn-default">
-                    Bianual
-                </label>
-            </div>
+        <div class="container">
+            <label for="pacote1" class="pacotesRadio">Básico
+                <input type="radio" name="radio-pacotes" id="pacote1" autocomplete="off" value="3" />
+                <span class="mark-pacotes"></span>
+            </label>
+            <label for="pacote2" class="pacotesRadio">Intermediário
+                <input type="radio" name="radio-pacotes" id="pacote2" autocomplete="off" value="6" />
+                <span class="mark-pacotes"></span>
+            </label>
+            <label for="pacote3" class="pacotesRadio">Profissional
+                <input type="radio" name="radio-pacotes" id="pacote3" autocomplete="off" value="9" />
+                <span class="mark-pacotes"></span>
+            </label>
+            <label for="pacote4" class="pacotesRadio">Módulo
+                <input type="radio" name="radio-pacotes" id="pacote4" autocomplete="off" value="9" />
+                <span class="mark-pacotes"></span>
+            </label>
+            <label for="pacote5" class="pacotesRadio">Anual
+                <input type="radio" name="radio-pacotes" id="pacote5" autocomplete="off" value="9" />
+                <span class="mark-pacotes"></span>
+            </label>
+            <label for="pacote6" class="pacotesRadio">Bianual
+                <input type="radio" name="radio-pacotes" id="pacote6" autocomplete="off" value="9" />
+                <span class="mark-pacotes"></span>
+            </label>
         </div>
     </section>
 
@@ -133,41 +69,48 @@
                 <h2 class="text-white">Módulos</h2>
                 <h6 class="text-white text-underline-rb-white">Escolha os módulos desejados.</h6>
                 <br>
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input checkTodos" id="customCheck0" disabled="disabled">
-                        <label class="custom-control-label" for="customCheck0">Marcar/Desmarcar Todos</label>
-                    </div>
-                </div>
+                <label class="modulosPagamento col-md-4 checkTodos" for="customCheck0">Marcar/Desmarcar Todos
+                    <input type="checkbox" id="customCheck0" disabled>
+                    <span class="checkmark"></span>
+                </label>
             </div>
-            <div class="row d-flex justify-content-center">
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <input type="checkbox" class="alo"> Documentação
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <input type="checkbox" class="alo"> Análise Critica
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <input type="checkbox" class="alo"> Auditoria
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <input type="checkbox" class="alo"> Registros
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <input type="checkbox" class="alo"> Plano de Ação
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <input type="checkbox" class="alo"> Matriz de Riscos
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <input type="checkbox" class="alo"> Indicadores
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <input type="checkbox" class="alo"> Calibrações
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <input type="checkbox" class="alo"> Usuários
-                </div>
+            <div class="row d-flex p-3">
+                <label class="modulosPagamento col-md-4" for="customCheck1">Documentação
+                    <input type="checkbox" id="customCheck1">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="modulosPagamento col-md-4" for="customCheck2">Análise Critica
+                    <input type="checkbox" id="customCheck2">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="modulosPagamento col-md-4" for="customCheck3">Auditoria
+                    <input type="checkbox" id="customCheck3">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="modulosPagamento col-md-4" for="customCheck4">Registros
+                    <input type="checkbox" id="customCheck4">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="modulosPagamento col-md-4" for="customCheck5">Plano de Ação
+                    <input type="checkbox" id="customCheck5">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="modulosPagamento col-md-4" for="customCheck6">Matriz de Riscos
+                    <input type="checkbox" id="customCheck6">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="modulosPagamento col-md-4" for="customCheck7">Indicadores
+                    <input type="checkbox" id="customCheck7">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="modulosPagamento col-md-4" for="customCheck8">Calibrações
+                    <input type="checkbox" id="customCheck8">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="modulosPagamento col-md-4" for="customCheck9">Usuários
+                    <input type="checkbox" id="customCheck9">
+                    <span class="checkmark"></span>
+                </label>
             </div>
         </div>
     </section>
