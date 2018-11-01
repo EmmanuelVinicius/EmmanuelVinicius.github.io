@@ -36,7 +36,7 @@ $(window).scroll(function () {
         $(".top-nav").removeClass("light-header");
     }
 });
-/*
+
 
 $(document.body).on("click", ".col-lg-4", function (ev) {
     $(this).attr("data-toggle", "modal").attr("data-target", "#exampleModal");
@@ -59,12 +59,12 @@ $(document.body).on("click", ".col-lg-4", function (ev) {
             $(".modal-body").html(result);
         }
     })
-})*/
+})
 
 $(document.body).on("click", ".contratar", function (ev) {
     $(this).attr("data-toggle", "modal").attr("data-target", "#ModalPagamento");
-    /*var nome = $(this).attr();
-    
+    var nome = $(this).attr();
+
     $.ajax({
         url: "pagamento.html",
         type: "GET",
@@ -72,40 +72,29 @@ $(document.body).on("click", ".contratar", function (ev) {
         success: function (result) {
             $(".modal-header").html(result);
         }
-    })*/
+    })
     console.log("deu certo")
 });
-/*
-switch ($(ev.target).attr("id")) {
-    case "Basico":
-        console.log($(ev.target).attr("id"))
-        break;
-    case "Intermediario":
-        console.log($(ev.target).attr("id"))
-        break;
-    case "Profissional":
-        console.log($(ev.target).attr("id"))
-        break;
-    case "Anual":
-        console.log($(ev.target).attr("id"))
-        break;
-    case "Bianual":
-        console.log($(ev.target).attr("id"))
-        break;
-    case "Modulo":
 
-        break;
-    default:
-        console.log($(ev.target).attr("id"))
-        break;
-}
-*/
+$("[name='radio-pacotes']").change(function () {
+    var valor = $(this).val();
+    if (valor == 3) {
+        $(".valor").text("R$ 299,90");
+    } else if (valor == 6)
+        $(".valor").text("R$ 399,90");
+    else {
+        $(".valor").text("R$ 499,90");
+    }
+})
 
-$(".redes").click(function(){
+
+
+
+$(".redes").click(function () {
     $(this).attr("target", "_blank")
 })
 //Logo inicial
-$(".navbar-brand").click(function (){
+$(".navbar-brand").click(function () {
     window.location.href = "index.html"
 })
 
@@ -113,41 +102,5 @@ $(".navbar-brand").click(function (){
 $(function () {
     var theYear = new Date().getFullYear();
     $('#year').html(theYear);
-});
-
-$('.carousel').slick({
-    dots: true,
-    infinite: false,
-    speed: 300,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    responsive: [
-        {
-            breakpoint: 1200,
-            settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3,
-                infinite: true,
-                dots: true
-            }
-        },
-        {
-            breakpoint: 991,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2
-            }
-        },
-        {
-            breakpoint: 767,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-            }
-        }
-        // You can unslick at a given breakpoint now by adding:
-        // settings: "unslick"
-        // instead of a settings object
-    ]
 });
 
