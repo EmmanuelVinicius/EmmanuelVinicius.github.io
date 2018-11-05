@@ -36,7 +36,7 @@ $(window).scroll(function () {
         $(".top-nav").removeClass("light-header");
     }
 });
-/*
+
 
 $(document.body).on("click", ".col-lg-4", function (ev) {
     $(this).attr("data-toggle", "modal").attr("data-target", "#exampleModal");
@@ -59,11 +59,11 @@ $(document.body).on("click", ".col-lg-4", function (ev) {
             $(".modal-body").html(result);
         }
     })
-})*/
+})
 
 $(document.body).on("click", ".contratar", function (ev) {
     $(this).attr("data-toggle", "modal").attr("data-target", "#ModalPagamento");
-    /*var nome = $(this).attr();
+    var nome = $(this).attr("id");
     
     $.ajax({
         url: "pagamento.html",
@@ -72,7 +72,7 @@ $(document.body).on("click", ".contratar", function (ev) {
         success: function (result) {
             $(".modal-header").html(result);
         }
-    })*/
+    })
     console.log("deu certo")
 
 });

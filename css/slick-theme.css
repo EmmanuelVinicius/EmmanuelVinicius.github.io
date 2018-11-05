@@ -2,8 +2,8 @@
 /* ========== Arrows ========== */
 
 @font-face {
-    font-family: "PizzaDudePointers";
-    src: url("../font-awesome/PIZZADUDEPOINTERS.ttf")
+    font-family: "BreeziFont";
+    src: url("../font-awesome/Breezi_Font.ttf");
 }
 
 .slick-prev, .slick-next {
@@ -40,7 +40,7 @@
 }
 
 .slick-prev:before, .slick-next:before {
-    font-family: 'PizzaDudePointers';
+    font-family: 'BreeziFont';
     font-size: 40px;
     line-height: 1;
     opacity: .75;
@@ -50,7 +50,7 @@
 }
 
 .slick-prev {
-    left: -45px;
+    left: -25px;
 }
 
 [dir='rtl'] .slick-prev {
@@ -59,15 +59,15 @@
 }
 
 .slick-prev:before {
-    content: 'Q';
+    content: '<';
 }
 
 [dir='rtl'] .slick-prev:before {
-    content: 'U';
+    content: '>';
 }
 
 .slick-next {
-    right: -25px;
+    right: -20px;
 }
 
 [dir='rtl'] .slick-next {
@@ -76,23 +76,23 @@
 }
 
 .slick-next:before {
-    content: 'U';
+    content: '>';
 }
 
 [dir='rtl'] .slick-next:before {
-    content: 'Q';
+    content: '<';
 }
 
 @media (max-width: 1200px) {
     .slick-prev, .slick-prev:before {
-        left: -10px;
+        left: -4px;
         font-size: 1.2em;
-        content: 'Q';
+        content: '<';
     }
     .slick-next, .slick-next:before {
-        right: -5px;
+        right: -12px;
         font-size: 1.2em;
-        content: 'U';
+        content: '>';
     }
 }
 
