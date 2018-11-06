@@ -76,31 +76,6 @@ $(document.body).on("click", ".contratar", function (ev) {
     console.log("deu certo")
 
 });
-/*
-switch ($(ev.target).attr("id")) {
-    case "Basico":
-        console.log($(ev.target).attr("id"))
-        break;
-    case "Intermediario":
-        console.log($(ev.target).attr("id"))
-        break;
-    case "Profissional":
-        console.log($(ev.target).attr("id"))
-        break;
-    case "Anual":
-        console.log($(ev.target).attr("id"))
-        break;
-    case "Bianual":
-        console.log($(ev.target).attr("id"))
-        break;
-    case "Modulo":
-
-        break;
-    default:
-        console.log($(ev.target).attr("id"))
-        break;
-}
-*/
 
 $(".redes").click(function () {
     $(this).attr("target", "_blank")
@@ -115,6 +90,13 @@ $(function () {
     var theYear = new Date().getFullYear();
     $('#year').html(theYear);
 });
+
+function mensagem(){
+    $(".alert"). removeClass("d-none");
+    $(".alert"). addClass("d-block");
+}
+
+
 
 
 var MAX_SELECT;

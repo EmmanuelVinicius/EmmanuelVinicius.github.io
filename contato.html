@@ -18,8 +18,8 @@
 	<nav class="navbar navbar-expand-md fixed-top top-nav">
 		<div class="container">
 			<img class="navbar-brand" src="img/logo_branco.fw.png" alt="LOGO">
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-			 aria-expanded="false" aria-label="Toggle navigation">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+			 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon">
 					<i class="fa fa-bars" aria-hidden="true"></i>
 				</span>
@@ -73,37 +73,41 @@
 					<div class="media py-4">
 						<div class="media-body">
 							<a href="https://www.facebook.com/litesgq/" target="_blank">
-							<div class="redes">
-								<span class="fa-stack fa-2x contact-icon">
-									<i class="fa fa-square-o fa-stack-2x"></i>
-									<i class="fa fa-facebook fa-stack-1x"></i>
-								</span>
-								Facebook
-							</div></a>
+								<div class="redes">
+									<span class="fa-stack fa-2x contact-icon">
+										<i class="fa fa-square-o fa-stack-2x"></i>
+										<i class="fa fa-facebook fa-stack-1x"></i>
+									</span>
+									Facebook
+								</div>
+							</a>
 							<a href="http://twitter.com/SgqDe" target="_blank">
-							<div class="redes">
-								<span class="fa-stack fa-2x contact-icon">
-									<i class="fa fa-square-o fa-stack-2x"></i>
-									<i class="fa fa-twitter	 fa-stack-1x"></i>
-								</span>
-								Twitter
-							</div></a>
+								<div class="redes">
+									<span class="fa-stack fa-2x contact-icon">
+										<i class="fa fa-square-o fa-stack-2x"></i>
+										<i class="fa fa-twitter	 fa-stack-1x"></i>
+									</span>
+									Twitter
+								</div>
+							</a>
 							<a href="https://www.instagram.com/sgqlite/" target="_blank">
-							<div class="redes">
-								<span class="fa-stack fa-2x contact-icon">
-									<i class="fa fa-square-o fa-stack-2x"></i>
-									<i class="fa fa-instagram fa-stack-1x"></i>
-								</span>
-								Instagram
-							</div></a>
+								<div class="redes">
+									<span class="fa-stack fa-2x contact-icon">
+										<i class="fa fa-square-o fa-stack-2x"></i>
+										<i class="fa fa-instagram fa-stack-1x"></i>
+									</span>
+									Instagram
+								</div>
+							</a>
 							<a href="https://www.linkedin.com/" target="_blank">
-							<div class="redes">
-								<span class="fa-stack fa-2x contact-icon">
-									<i class="fa fa-square-o fa-stack-2x"></i>
-									<i class="fa fa-linkedin fa-stack-1x"></i>
-								</span>
-								Linked-in
-							</div></a>
+								<div class="redes">
+									<span class="fa-stack fa-2x contact-icon">
+										<i class="fa fa-square-o fa-stack-2x"></i>
+										<i class="fa fa-linkedin fa-stack-1x"></i>
+									</span>
+									Linked-in
+								</div>
+							</a>
 						</div>
 					</div>
 				</div>
@@ -144,12 +148,16 @@
 									<label class="sr-only" for="formGroupExampleInput2">Menssagem</label>
 									<textarea class="form-control" placeholder="Digite aqui a sua mensagem" rows="7" resize="none"></textarea>
 								</div>
-								<div class="form-group">
-									<button class="btn btn-primary btn-capsul">Enviar</button>
-								</div>
 							</div>
 						</div>
 					</form>
+					<div class="form-group">
+						<button class="btn btn-primary btn-capsul" onclick="mensagem()">Enviar</button>
+					</div>
+					<div class="alert alert-success d-none">
+						<a href="#" class="close" data-dismiss="alert">&times;</a>
+						Enviado com sucesso!
+					</div>
 				</div>
 			</div>
 		</div>
@@ -175,28 +183,28 @@
 					<h5 class="text-white">
 						Compartilhe
 					</h5>
-						<ul class="social-box social-circle">
-							<li>
-								<a href="https://www.facebook.com/litesgq/" target="_blank" class="fa-box" title="Facebook">
-									<i class="fa fa-facebook"></i>
-								</a>
-							</li>
-							<li>
-								<a href="https://twitter.com/SgqDe" target="_blank" class="tw-box" title="Twitter">
-									<i class="fa fa-twitter"></i>
-								</a>
-							</li>
-							<li>
-								<a href="https://www.instagram.com/sgqlite/" target="_blank" class="ig-box" title="Instagram">
-									<i class="fa fa-instagram"></i>
-								</a>
-							</li>
-							<li>
-								<a href="https://www.linkedin.com/" target="_blank" class="ld-box" title="Linkedin">
-									<i class="fa fa-linkedin"></i>
-								</a>
-							</li>
-						</ul>
+					<ul class="social-box social-circle">
+						<li>
+							<a href="https://www.facebook.com/litesgq/" target="_blank" class="fa-box" title="Facebook">
+								<i class="fa fa-facebook"></i>
+							</a>
+						</li>
+						<li>
+							<a href="https://twitter.com/SgqDe" target="_blank" class="tw-box" title="Twitter">
+								<i class="fa fa-twitter"></i>
+							</a>
+						</li>
+						<li>
+							<a href="https://www.instagram.com/sgqlite/" target="_blank" class="ig-box" title="Instagram">
+								<i class="fa fa-instagram"></i>
+							</a>
+						</li>
+						<li>
+							<a href="https://www.linkedin.com/" target="_blank" class="ld-box" title="Linkedin">
+								<i class="fa fa-linkedin"></i>
+							</a>
+						</li>
+					</ul>
 				</div>
 			</div>
 		</div>
@@ -217,7 +225,8 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
 	 crossorigin="anonymous"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"></script>
-	<script type="IN/MemberProfile" data-id="http://www.linkedin.com/in/sgq-lite-3a392b172" data-format="inline" data-related="false"></script>
+	<script type="IN/MemberProfile" data-id="http://www.linkedin.com/in/sgq-lite-3a392b172" data-format="inline"
+	 data-related="false"></script>
 	<script src="js/core.js"></script>
 </body>
 
