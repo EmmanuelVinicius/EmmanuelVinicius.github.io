@@ -64,16 +64,43 @@ $(document.body).on("click", ".col-lg-4", function (ev) {
 $(document.body).on("click", ".contratar", function (ev) {
     $(this).attr("data-toggle", "modal").attr("data-target", "#ModalPagamento");
     var nome = $(this).attr("id");
-    
-    $.ajax({
-        url: "pagamento.html",
-        type: "GET",
-        dataType: "html",
-        success: function (result) {
-            $(".modal-header").html(result);
-        }
-    })
-    console.log("deu certo")
+
+    switch (nome) {
+        case "basico":
+            $("option.op1").attr("selected", "true");
+            console.log($("option.op1").attr("id"));
+            break;
+        case "intermediario":
+            $("option.op2").attr("selected", "true");
+            console.log($("option.op2").attr("id"));
+            break;
+        case "profissional":
+            $("option.op3").attr("selected", "true");
+            console.log($("option.op3").attr("id"));
+            break;
+        case "modulo":
+            $("option.op4").attr("selected", "true");
+            console.log($("option.op4").attr("id"));
+            break;
+        case "usuario":
+            $("option.op5").attr("selected", "true");
+            console.log($("option.op5").attr("id"));
+            break;
+        case "anual":
+            $("option.op6").attr("selected", "true");
+            console.log($("option.op6").attr("id"));
+            break;
+        case "bianual":
+            $("option.op7").attr("selected", "true");
+            console.log($("option.op7").attr("id"));
+            break;
+
+        default:
+            break;
+    }
+
+
+    console.log("deu certo, mas " + nome)
 
 });
 
@@ -91,17 +118,19 @@ $(function () {
     $('#year').html(theYear);
 });
 
-function mensagem(){
-    $(".alert"). removeClass("d-none");
-    $(".alert"). addClass("d-block");
+function mensagem() {
+    $(".alert").removeClass("d-none");
+    $(".alert").addClass("d-block");
 }
 
 
 
 
+
+
 var MAX_SELECT;
-$("[name='radio-pacotes']").change(function (ev) {
-    if (($(this).attr("id") == "radio-pacotes1") || ($(this).attr("id") == "radio-pacotes2")) {
+$("select").change(function (ev) {
+    if (($(this).attr("value") == "1") || ($(this).attr("value") == "2")) {
         $(".checkTodos").attr('disabled', 'disabled');
     } else {
         $(".checkTodos").removeAttr('disabled');
@@ -109,22 +138,14 @@ $("[name='radio-pacotes']").change(function (ev) {
     MAX_SELECT = $(this).val();
 })
 
-$('.alo').on('change', function () {
-    if ($(this).siblings(':checked').length >= MAX_SELECT) {
+$('select').on('change', function () {
+    if ($(this).parent().children(':checked').length >= MAX_SELECT) {
         this.checked = false;
     }
 });
 
-// $('input.custom-control-input').on('change', function () {
-//     if ($(this).siblings(':checked').length >= MAX_SELECT) {
-//         this.checked = false;
-//     }
-//     $(".valor").html(
-//         "R$ " + ""
-//     )
-// });
-// $(".checkTodos").click(function () {
-//     $('input.custom-control-input').not('.checkTodos').prop('checked', '.checkTodos'.checked);
-// });
+$(".checkTodos").click(function () {
+    $('input.custom-control-input').not('.checkTodos').prop('checked', '.checkTodos'.checked);
+});
 
 
