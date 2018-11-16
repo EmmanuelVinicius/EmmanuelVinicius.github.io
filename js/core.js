@@ -37,6 +37,35 @@ $(window).scroll(function () {
     }
 });
 
+//Logo inicial
+$(".navbar-brand").click(function () {
+    window.location.href = "index.html"
+})
+//Redes Sociais
+$(".redes").click(function () {
+    $(this).attr("target", "_blank")
+})
+//Contato
+$(".mensagem").click(function() {
+    $(this).html("<i class='fa fa-spinner loader' aria-hidden='true'></i>");
+    setTimeout(() => {
+        $(".alert").removeClass("d-none");
+        $(".alert").addClass("d-block");
+        $(this).html("Enviar");
+    }, 3000);
+})
+
+// Year for copy content
+$(function () {
+    var theYear = new Date().getFullYear();
+    $('#year').html(theYear);
+});
+
+
+//===========================================
+//============== MÓDULOS ====================
+//===========================================
+
 
 $(document.body).on("click", ".col-lg-4", function (ev) {
     $(this).attr("data-toggle", "modal").attr("data-target", "#exampleModal");
@@ -61,73 +90,68 @@ $(document.body).on("click", ".col-lg-4", function (ev) {
     })
 })
 
+
+//===========================================
+//============= PAGAMENTO ===================
+//===========================================
+
+
 $(document.body).on("click", ".contratar", function (ev) {
     $(this).attr("data-toggle", "modal").attr("data-target", "#ModalPagamento");
     var nome = $(this).attr("id");
 
     switch (nome) {
-        case "basico":
-            $("option.op1").attr("selected", "true");
-            console.log($("option.op1").attr("id"));
-            break;
+        // case "basico":
+        //     $("option#op1").attr("selected", "true");
+        //     console.log($("option#op1").attr("id"));
+        //     break;
         case "intermediario":
-            $("option.op2").attr("selected", "true");
-            console.log($("option.op2").attr("id"));
+            $("option#op2").attr("selected", "true");
+            console.log($("option#op2").attr("id"));
             break;
         case "profissional":
-            $("option.op3").attr("selected", "true");
-            console.log($("option.op3").attr("id"));
+            $("option#op3").attr("selected", "true");
+            console.log($("option#op3").attr("id"));
             break;
         case "modulo":
-            $("option.op4").attr("selected", "true");
-            console.log($("option.op4").attr("id"));
+            $("option#op4").attr("selected", "true");
+            console.log($("option#op4").attr("id"));
             break;
         case "usuario":
-            $("option.op5").attr("selected", "true");
-            console.log($("option.op5").attr("id"));
+            $("option#op5").attr("selected", "true");
+            console.log($("option#op5").attr("id"));
             break;
         case "anual":
-            $("option.op6").attr("selected", "true");
-            console.log($("option.op6").attr("id"));
+            $("option#op6").attr("selected", "true");
+            console.log($("option#op6").attr("id"));
             break;
         case "bianual":
-            $("option.op7").attr("selected", "true");
-            console.log($("option.op7").attr("id"));
+            $("option#op7").attr("selected", "true");
+            console.log($("option#op7").attr("id"));
             break;
-
         default:
+            $("option#op1").attr("selected", "true");
+            console.log($("option#op1").attr("id"));
             break;
     }
-
-
-    console.log("deu certo, mas " + nome)
-
 });
 
-$(".redes").click(function () {
-    $(this).attr("target", "_blank")
-})
-//Logo inicial
-$(".navbar-brand").click(function () {
-    window.location.href = "index.html"
-})
-
-// Year for copy content
-$(function () {
-    var theYear = new Date().getFullYear();
-    $('#year').html(theYear);
+$(".checkTodos").click(function () {
+    $('.modulosPagamento').not('.checkTodos').prop('checked', '.checkTodos'.checked);
 });
 
-function mensagem() {
-    $(".alert").removeClass("d-none");
-    $(".alert").addClass("d-block");
-}
-
-
-
-
-
-
+var checkTodos = $(".checkTodos");
+checkTodos.click(function () {
+    console.log(this);
+    if ($(this).is(':checked')) {
+        $('input:checkbox').prop("checked", true);
+        console.log(this);
+    } else {
+        $('input:checkbox').prop("checked", false);
+        console.log(this);
+    }
+});
+/*
 var MAX_SELECT;
 $("select").change(function (ev) {
     if (($(this).attr("value") == "1") || ($(this).attr("value") == "2")) {
@@ -143,9 +167,4 @@ $('select').on('change', function () {
         this.checked = false;
     }
 });
-
-$(".checkTodos").click(function () {
-    $('input.custom-control-input').not('.checkTodos').prop('checked', '.checkTodos'.checked);
-});
-
-
+*/
