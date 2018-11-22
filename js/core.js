@@ -136,21 +136,11 @@ $(document.body).on("click", ".contratar", function (ev) {
     }
 });
 
-$(".checkTodos").click(function () {
-    $('.modulosPagamento').not('.checkTodos').prop('checked', '.checkTodos'.checked);
+$("#checkTodos").change(function () {
+    $("input:checkbox").prop('checked', $(this).prop("checked"));
 });
 
-var checkTodos = $(".checkTodos");
-checkTodos.click(function () {
-    console.log(this);
-    if ($(this).is(':checked')) {
-        $('input:checkbox').prop("checked", true);
-        console.log(this);
-    } else {
-        $('input:checkbox').prop("checked", false);
-        console.log(this);
-    }
-});
+
 /*
 var MAX_SELECT;
 $("select").change(function (ev) {
